@@ -44,8 +44,6 @@ def herons_formula(s1,s2,s3):
         ...
     ValueError: side lengths must agree with Triangle Inequality Theorem
         
-
-    
     '''
     
     if s1 <= 0 or s2 <=0 or s3 <= 0:
@@ -54,17 +52,11 @@ def herons_formula(s1,s2,s3):
     if s1+s2<s3 or s2+s3<s1 or s1+s3<s2:
         raise ValueError("side lengths must agree with Triangle Inequality Theorem")
     
-    
-    
-    
-    
-    
-    
-        
     s = (s1+s2+s3)/2
     area = sqrt(s*(s-s1)*(s-s2)*(s-s3))
     r_area = round(area, 3) 
     print(r_area)
+    
     
 
 #def main():
