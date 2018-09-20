@@ -136,7 +136,7 @@ def v_cone(r, h):
     
     volume_cone = pi*((r**2)*(h/3))
     vol_cone_round = round(volume_cone, 2)
-    print(vol_cone_round)
+    print("The volume of the cone is {}".format(vol_cone_round))
     
 def sa_sphere(r):
     '''prints the surface area of a cube given the radius
@@ -191,6 +191,14 @@ def vol_cyl_calc():
     v_cylinder(r,h)
     sleep(2)
     print()
+
+def vol_cone_calc():
+    r = float(input("What is the length of the radius? "))
+    h = float(input("What is height? "))
+    
+    v_cone(r,h)
+    sleep(2)
+    print()
     
     
     
@@ -212,6 +220,9 @@ def main():
             
         elif function == "c":
             vol_cyl_calc()
+            
+        elif function == "d":
+            vol_cone_calc()
             
         
         
