@@ -136,6 +136,7 @@ def v_cone(r, h):
     
     volume_cone = pi*((r**2)*(h/3))
     vol_cone_round = round(volume_cone, 2)
+<<<<<<< HEAD
     print("The volume of the cone is {}".format(vol_cone_round))
     
 def sa_sphere(r):
@@ -227,6 +228,40 @@ def main():
         
         
     
+=======
+    print(vol_cone_round)
+    
+def sa_sphere(r):
+    '''prints the surface area of a cube given the radius
+
+    >>> sa_sphere(2)
+    50.27
+
+    >>> sa_sphere(15)
+    2827.43
+    
+    >>> sa_sphere(.5)
+    3.14
+    
+    >>> sa_sphere(21)
+    5541.77
+    
+    The radius of a sphere cannot be negative
+    >>> sa_sphere(-7)
+    Traceback (most recent call last):
+        ...
+    ValueError: the radius must be positive
+    '''
+    
+    if r <= 0:
+        raise ValueError("the radius must be positive")
+    
+    sphere_sa = 4*pi*(r**2)
+    round_sphere_sa = round(sphere_sa, 2)
+    print(round_sphere_sa)
+    
+#def main():
+>>>>>>> 4c1d6d2091ea4459144f487b690d5d0068e91092
     
     
     
@@ -234,4 +269,9 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod()
     
+<<<<<<< HEAD
     main()
+=======
+    #main()
+    
+>>>>>>> 4c1d6d2091ea4459144f487b690d5d0068e91092
