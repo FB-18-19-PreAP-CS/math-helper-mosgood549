@@ -8,11 +8,14 @@ def midpoint(x1,y1,x2,y2):
     >>> midpoint(-3,3,5,3)
     (1.0,3.0)
     
-    >>> midpoint(4,1,10,5)
-    (7.0,3.0)
+    >>> midpoint(6,12,15,17)
+    (10.5,14.5)
     
-    >>> midpoint(-2,5,7,7)
-    (2.5,6.0)
+    >>> midpoint(100,-10,26,40)
+    (63.0,15.0)
+    
+    >>> midpoint(3,2,3,0)
+    (3.0,1.0)
     
     There cannot be a midpoint between the same points
     >>> midpoint(2,3,2,3)
@@ -31,7 +34,6 @@ def midpoint(x1,y1,x2,y2):
     
 def herons_formula(s1,s2,s3):
     '''prints the area of the triangle, given three sides (s1,s2,s3)
-
     >>> herons_formula(48,26,26)
     240.0
     
@@ -68,7 +70,6 @@ def herons_formula(s1,s2,s3):
     
 def v_cylinder(r,h):
     '''prints the area for the volume of a cylinder, given the radius (r) and height(h)
-
     >>> v_cylinder(4,10)
     502.65
     
@@ -103,7 +104,6 @@ def v_cylinder(r,h):
     
 def v_cone(r, h):
     '''prints the volume of a cone given the radius and the height
-
     >>> v_cone(4,6)
     100.53
     
@@ -136,7 +136,36 @@ def v_cone(r, h):
     volume_cone = pi*((r**2)*(h/3))
     vol_cone_round = round(volume_cone, 2)
     print(vol_cone_round)
+    
+def sa_sphere(r):
+    '''prints the surface area of a cube given the radius
 
+    >>> sa_sphere(2)
+    50.27
+
+    >>> sa_sphere(15)
+    2827.43
+    
+    >>> sa_sphere(.5)
+    3.14
+    
+    >>> sa_sphere(21)
+    5541.77
+    
+    The radius of a sphere cannot be negative
+    >>> sa_sphere(-7)
+    Traceback (most recent call last):
+        ...
+    ValueError: the radius must be positive
+    '''
+    
+    if r <= 0:
+        raise ValueError("the radius must be positive")
+    
+    sphere_sa = 4*pi*(r**2)
+    round_sphere_sa = round(sphere_sa, 2)
+    print(round_sphere_sa)
+    
 #def main():
     
     
@@ -146,5 +175,4 @@ if __name__ == "__main__":
     doctest.testmod()
     
     #main()
-    
     
