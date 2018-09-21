@@ -217,6 +217,7 @@ def main():
         print("(c) Volume of a Cylinder")
         print("(d) Volume of a Cone")
         print("(e) Surface area of a Sphere")
+        print("-Type 'exit' if you would like to leave the program")
         function = input("What formula would you like to use today? ")
         
         if function == "a":
@@ -233,6 +234,9 @@ def main():
             
         elif function == "e":
             sa_sphere_calc()
+            
+        elif function == "exit":
+            break
             
     
         
