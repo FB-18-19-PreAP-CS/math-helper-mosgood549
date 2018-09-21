@@ -7,16 +7,16 @@ def midpoint(x1,y1,x2,y2):
     ''' prints the midpoint between two coordinates (x1,y1) and (x2,y2)
     
     >>> midpoint(-3,3,5,3)
-    (1.0,3.0)
+    The midpoint between (-3,3) and (5,3) is (1.0,3.0)
     
     >>> midpoint(6,12,15,17)
-    (10.5,14.5)
+    The midpoint between (6,12) and (15,17) is (10.5,14.5)
     
     >>> midpoint(100,-10,26,40)
-    (63.0,15.0)
+    The midpoint between (100,-10) and (26,40) is (63.0,15.0)
     
     >>> midpoint(3,2,3,0)
-    (3.0,1.0)
+    The midpoint between (3,2) and (3,0) is (3.0,1.0)
     
     There cannot be a midpoint between the same points
     >>> midpoint(2,3,2,3)
@@ -36,13 +36,13 @@ def midpoint(x1,y1,x2,y2):
 def herons_formula(s1,s2,s3):
     '''prints the area of the triangle, given three sides (s1,s2,s3)
     >>> herons_formula(48,26,26)
-    240.0
+    The area of the triangle is 240.0
     
     >>> herons_formula(6,8,10)
-    24.0
+    The area of the triangle is 24.0
     
     >>> herons_formula(8,15,17)
-    60.0
+    The area of the triangle is 60.0
     
     There are no negative triangle lengths
     >>> herons_formula(5,-10,12)
@@ -72,13 +72,13 @@ def herons_formula(s1,s2,s3):
 def v_cylinder(r,h):
     '''prints the area for the volume of a cylinder, given the radius (r) and height(h)
     >>> v_cylinder(4,10)
-    502.65
+    The volume of the Cylinder is 502.65
     
     >>> v_cylinder(7,2)
-    307.88
+    The volume of the Cylinder is 307.88
     
     >>> v_cylinder(2.5,2.5)
-    49.09
+    The volume of the Cylinder is 49.09
     
     A cylinder can't have a negative radius length
     >>> v_cylinder(-2, 5)
@@ -106,13 +106,13 @@ def v_cylinder(r,h):
 def v_cone(r, h):
     '''prints the volume of a cone given the radius and the height
     >>> v_cone(4,6)
-    100.53
+    The volume of the cone is 100.53
     
     >>> v_cone(7,7)
-    359.19
+    The volume of the cone is 359.19
     
     >>> v_cone(100,2)
-    20943.95
+    The volume of the cone is 20943.95
     
     A cone can't have a negative radius length
     >>> v_cone(-20, 17)
@@ -136,21 +136,20 @@ def v_cone(r, h):
     
     volume_cone = pi*((r**2)*(h/3))
     vol_cone_round = round(volume_cone, 2)
-<<<<<<< HEAD
     print("The volume of the cone is {}".format(vol_cone_round))
     
 def sa_sphere(r):
     '''prints the surface area of a cube given the radius
     >>> sa_sphere(2)
-    50.27
+    The surface area of the sphere is 50.27
     >>> sa_sphere(15)
-    2827.43
+    The surface area of the sphere is 2827.43
     
     >>> sa_sphere(.5)
-    3.14
+    The surface area of the sphere is 3.14
     
     >>> sa_sphere(21)
-    5541.77
+    The surface area of the sphere is 5541.77
     
     The radius of a sphere cannot be negative
     >>> sa_sphere(-7)
@@ -164,7 +163,7 @@ def sa_sphere(r):
     
     sphere_sa = 4*pi*(r**2)
     round_sphere_sa = round(sphere_sa, 2)
-    print(round_sphere_sa)
+    print("The surface area of the sphere is {}".format(round_sphere_sa))
     
 def midpoint_calc():
     x1 = float(input("What is your first x-coordinate? " ))
@@ -187,7 +186,7 @@ def herons_calc():
 
 def vol_cyl_calc():
     r = float(input("What is the length of the radius? "))
-    h = float(input("What is height? "))
+    h = float(input("What is the height? "))
     
     v_cylinder(r,h)
     sleep(2)
@@ -198,6 +197,13 @@ def vol_cone_calc():
     h = float(input("What is height? "))
     
     v_cone(r,h)
+    sleep(2)
+    print()
+    
+def sa_sphere_calc():
+    r = float(input("What is the length of the radius? "))
+    
+    sa_sphere(r)
     sleep(2)
     print()
     
@@ -225,53 +231,17 @@ def main():
         elif function == "d":
             vol_cone_calc()
             
+        elif function == "e":
+            sa_sphere_calc()
+            
+    
         
         
-    
-=======
-    print(vol_cone_round)
-    
-def sa_sphere(r):
-    '''prints the surface area of a cube given the radius
 
-    >>> sa_sphere(2)
-    50.27
-
-    >>> sa_sphere(15)
-    2827.43
-    
-    >>> sa_sphere(.5)
-    3.14
-    
-    >>> sa_sphere(21)
-    5541.77
-    
-    The radius of a sphere cannot be negative
-    >>> sa_sphere(-7)
-    Traceback (most recent call last):
-        ...
-    ValueError: the radius must be positive
-    '''
-    
-    if r <= 0:
-        raise ValueError("the radius must be positive")
-    
-    sphere_sa = 4*pi*(r**2)
-    round_sphere_sa = round(sphere_sa, 2)
-    print(round_sphere_sa)
-    
-#def main():
->>>>>>> 4c1d6d2091ea4459144f487b690d5d0068e91092
-    
-    
     
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    
-<<<<<<< HEAD
     main()
-=======
-    #main()
     
->>>>>>> 4c1d6d2091ea4459144f487b690d5d0068e91092
+
