@@ -55,13 +55,18 @@ def herons_formula(s1,s2,s3):
     Traceback (most recent call last):
         ...
     ValueError: side lengths must agree with Triangle Inequality Theorem
+    
+    >>> herons_formula(1,2,3)
+    Traceback (most recent call last):
+        ...
+    ValueError: side lengths must agree with Triangle Inequality Theorem
         
     '''
     
     if s1 <= 0 or s2 <=0 or s3 <= 0:
         raise ValueError("sides must be positive")
     
-    if s1+s2<s3 or s2+s3<s1 or s1+s3<s2:
+    if s1+s2<=s3 or s2+s3<=s1 or s1+s3<=s2:
         raise ValueError("side lengths must agree with Triangle Inequality Theorem")
     
     s = (s1+s2+s3)/2
@@ -246,6 +251,6 @@ def main():
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    main()
+    #main()
     
 
