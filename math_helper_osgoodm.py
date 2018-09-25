@@ -243,6 +243,11 @@ def main():
         elif function.lower() == "exit":
             break
         
+        elif not function == "a" or function == "b" or function == "c" or function == "d" or function == "e" or function == "exit":
+            print()
+            print("That letter/other input variable is not on the list")
+            break
+        
             
     
         
