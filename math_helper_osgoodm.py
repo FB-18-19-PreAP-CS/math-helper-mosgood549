@@ -225,23 +225,24 @@ def main():
         print("-Type 'exit' if you would like to leave the program")
         function = input("What formula would you like to use today? ")
         
-        if function == "a":
+        if function.lower() == "a":
             midpoint_calc()
             
-        elif function == "b":
+        elif function.lower() == "b":
             herons_calc()
             
-        elif function == "c":
+        elif function.lower() == "c":
             vol_cyl_calc()
             
-        elif function == "d":
+        elif function.lower() == "d":
             vol_cone_calc()
             
-        elif function == "e":
+        elif function.lower() == "e":
             sa_sphere_calc()
             
-        elif function == "exit":
+        elif function.lower() == "exit":
             break
+        
             
     
         
