@@ -216,25 +216,34 @@ def vol_cyl_calc():
             break
         except Exception as e:
             print()
-            print(f"Error: {e}")
-            if e[:33]=='could not convert string to float':
-                pass
+            print('Invalid input, please try again')
 def vol_cone_calc():
-    r = float(input("What is the length of the radius? "))
-    h = float(input("What is height? "))
-    
-    v_cone(r,h)
-    sleep(2)
-    print()
-    
+    while True:
+        try:
+            print()
+            r = float(input("What is the length of the radius? "))
+            h = float(input("What is height? "))
+            print()
+            v_cone(r,h)
+            sleep(2)
+            print()
+            break
+        except Exception as e:
+            print()
+            print('Invalid input, please try again')
 def sa_sphere_calc():
-    r = float(input("What is the length of the radius? "))
-    
-    sa_sphere(r)
-    sleep(2)
-    print()
-    
-    
+    while True:
+        try:
+            print()
+            r = float(input("What is the length of the radius? "))
+            print()
+            sa_sphere(r)
+            sleep(2)
+            print()
+            break
+        except Exception as e:
+            print()
+            print('Invalid input, please try again')
     
 def main():
     while True:
